@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Scoped with .rb- prefix so it won't clash with other pages' CSS.
+   Theme: BloodLink (crimson + soft pink, rounded, pill buttons) */
+:root {
+  --rb-red: #b5121b;
+  --rb-red-dark: #8f0e15;
+  --rb-pink: #fdecec;
+  --rb-pink-soft: #fff6f6;
+  --rb-border: #f3d6d6;
+  --rb-text: #2b1a1a;
+  --rb-muted: #7a6666;
+}
+
+.rb-page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 20px 72px;
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--rb-text);
+}
+.rb-page h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.rb-sub {
+  color: var(--rb-muted);
+  margin: 0 0 28px;
+}
+
+.rb-card {
+  background: #fff;
+  border: 1px solid var(--rb-border);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(181, 18, 27, 0.06);
+}
+.rb-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.rb-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.rb-field label {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+.rb-field input,
+.rb-field select {
+  padding: 11px 14px;
+  border: 1.5px solid var(--rb-border);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--rb-pink-soft);
+  color: var(--rb-text);
+}
+.rb-field input:focus-visible,
+.rb-field select:focus-visible,
+.rb-btn:focus-visible,
+.rb-tab:focus-visible {
+  outline: 3px solid #f4b4b8;
+  outline-offset: 1px;
+}
+.rb-error {
+  color: var(--rb-red);
+  font-size: 0.82rem;
+}
+
+.rb-btn {
+  background: var(--rb-red);
+  color: #fff;
+  border: 1.5px solid var(--rb-red);
+  border-radius: 999px;
+  padding: 11px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.rb-btn:hover {
+  background: var(--rb-red-dark);
+  border-color: var(--rb-red-dark);
+}
+.rb-btn.ghost {
+  background: #fff;
+  color: var(--rb-red);
+}
+.rb-btn.ghost:hover {
+  background: var(--rb-pink);
+}
+.rb-btn.small {
+  padding: 6px 14px;
+  font-size: 0.82rem;
+}
+
+.rb-toast {
+  background: #eaf7ee;
+  border: 1px solid #b6e0c2;
+  color: #1b5e20;
+  padding: 12px 18px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.rb-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.rb-badge.open {
+  background: #fff1de;
+  color: #8a5300;
+}
+.rb-badge.matched {
+  background: #e3f0ff;
+  color: #0d47a1;
+}
+.rb-badge.fulfilled {
+  background: #e3f6e8;
+  color: #1b5e20;
+}
+.rb-badge.cancelled {
+  background: #eeeaea;
+  color: #5f5555;
+}
+.rb-badge.critical {
+  background: var(--rb-red);
+  color: #fff;
+}
+.rb-badge.urgent {
+  background: #fde3c8;
+  color: #8a4300;
+}
+.rb-badge.normal {
+  background: #eeeaea;
+  color: #5f5555;
+}
+
+.rb-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.rb-tab {
+  padding: 7px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--rb-border);
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.rb-tab.active {
+  background: var(--rb-red);
+  color: #fff;
+  border-color: var(--rb-red);
+}
+
+.rb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rb-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.rb-group {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--rb-pink);
+  color: var(--rb-red);
+  font-size: 1.05rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.rb-muted {
+  color: var(--rb-muted);
+  font-size: 0.88rem;
+}
+.rb-empty {
+  text-align: center;
+  padding: 44px 20px;
+  color: var(--rb-muted);
+  background: var(--rb-pink-soft);
+}
+.rb-unread {
+  border-left: 5px solid var(--rb-red);
+  background: var(--rb-pink-soft);
+}
+
+.rb-stat {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--rb-red);
+}
+.rb-bar-row {
+  display: grid;
+  grid-template-columns: 44px 1fr 30px;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.rb-bar {
+  height: 12px;
+  background: var(--rb-pink);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.rb-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--rb-red);
+  border-radius: 999px;
+}
+
+.rb-table-wrap {
+  overflow-x: auto;
+  padding: 8px 12px;
+}
+.rb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.rb-table th {
+  background: var(--rb-pink-soft);
+  color: var(--rb-muted);
+  font-weight: 600;
+}
+.rb-table th,
+.rb-table td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #f6e6e6;
+  white-space: nowrap;
+}
+.rb-flag {
+  color: var(--rb-red);
+  font-weight: 600;
+}
+
+.rb-section {
+  margin-top: 32px;
+}
+.rb-section h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+@media (max-width: 600px) {
+  .rb-page h1 {
+    font-size: 1.6rem;
+  }
+}
